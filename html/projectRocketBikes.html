@@ -3,17 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jennifer Pelzer | Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css">
+
+  <title>PAGE TITLE | Jennifer Pelzer Portfolio</title>
+
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
-  <header></header>
 
-  <main></main>
+  <!-- Accessible keyboard skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <footer></footer>
+  <!-- ================= LEFT VERTICAL COLOR BAR ================= -->
+  <div class="accent-vertical" aria-hidden="true"></div>
 
-  <script src="js/main.js"></script>
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" role="banner">
+
+    <!-- Horizontal bar at top (thin line) -->
+    <div class="accent-horizontal" aria-hidden="true"></div>
+
+    <div class="header-inner">
+
+      <!-- Logo / Home -->
+      <a href="index.html" class="logo-link">
+        <img src="../assets/images/JP_logo.png"
+             alt="JP — Home page of Jennifer Pelzer">
+      </a>
+
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main navigation">
+
+        <!-- Mobile hamburger button -->
+        <button id="menu-btn"
+                class="menu-btn"
+                aria-expanded="false"
+                aria-controls="primary-nav"
+                aria-label="Toggle navigation">
+          ☰
+        </button>
+
+        <ul id="primary-nav" class="nav-list">
+          <li><a href="index.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="connect.html">Stack</a></li>
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ================= SHARED TAGLINE ================= -->
+  <section class="tagline" aria-label="Site tagline">
+    <p>Designing accessible, intuitive products, where empathy meets engineering.</p>
+  </section>
+
+  <!-- ================= PAGE CONTENT ================= -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- Replace this with page-specific content -->
+    <h1>PAGE TITLE</h1>
+    <p>Page content goes here...</p>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" role="contentinfo">
+
+    <nav class="footer-nav" aria-label="Footer links">
+      <ul>
+        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        <li><a href="https://behance.net" target="_blank">Behance</a></li>
+        <li><a href="contact.html">Contact link</a></li>
+        <li><a href="../assets/Resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; <span id="year"></span> Jennifer Pelzer. Accessibility-First Web Development.</p>
+
+  </footer>
+
+  <!-- Global JS -->
+  <script src="../js/main.js"></script>
+
 </body>
 </html>
+
