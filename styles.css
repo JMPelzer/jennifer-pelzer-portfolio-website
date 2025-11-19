@@ -1,0 +1,370 @@
+/* ============================================================
+   0. MEYER RESET
+   (Light version + additions for modern browser defaults)
+   ============================================================ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* ============================================================
+   1. IMPORT FONTS
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+
+/* ============================================================
+   2. DESIGN TOKENS : ROOT VARIABLES
+   ============================================================ */
+:root {
+  /* COLOR TOKENS */
+  --color-blue: #0040BC;
+  --color-plum: #491E5C;
+  --color-white: #FFFFFF;
+  --color-black: #111111;
+  --color-gray: #DDDDDD;
+
+  /* TYPOGRAPHY */
+  --font-body: 'Source Sans Pro', system-ui, sans-serif;
+  --font-serif: 'Spectral', serif;
+
+  /* FONT SIZE SCALE (mobile-first) */
+  --fs-xs: 0.875rem;  /* 14px */
+  --fs-sm: 1rem;      /* 16px */
+  --fs-md: 1.125rem;  /* 18px */
+  --fs-lg: 1.5rem;    /* 24px */
+  --fs-xl: 2rem;      /* 32px */
+  --fs-2xl: 2.5rem;   /* 40px */
+  --fs-3xl: 3rem;     /* 48px */
+
+  /* LINE HEIGHTS */
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  /* SPACING SCALE */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+
+  /* BORDERS + RADIUS */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-round: 50%;
+
+  /* SHADOWS */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+
+  /* LAYOUT WIDTH */
+  --container-width: 1200px;
+}
+
+
+/* ============================================================
+   3. GLOBAL ELEMENT STYLES
+   ============================================================ */
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--color-black);
+  background: var(--color-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ============================================================
+   4. ACCESSIBILITY
+   ============================================================ */
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-blue);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Strong focus outline for WCAG AA */
+:focus-visible {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 3px;
+}
+
+
+/* ============================================================
+   5. TYPOGRAPHY SYSTEM (h1–h4, p, labels, subheaders)
+   ============================================================ */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: var(--lh-tight);
+  color: var(--color-black);
+}
+
+h1 {
+  font-size: var(--fs-2xl);
+}
+
+h2 {
+  font-size: var(--fs-xl);
+}
+
+h3 {
+  font-size: var(--fs-lg);
+}
+
+h4 {
+  font-size: var(--fs-md);
+}
+
+p, li {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+}
+
+
+/* Subheader text */
+.subheader {
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: var(--color-plum);
+}
+
+/* Caption */
+.caption {
+  font-size: var(--fs-xs);
+  opacity: 0.8;
+}
+
+
+/* ============================================================
+   6. GLOBAL LAYOUT HELPERS
+   ============================================================ */
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.center-text {
+  text-align: center;
+}
+
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+
+
+/* ============================================================
+   7. HEADER LAYOUT (bars + logo + nav)
+   ============================================================ */
+
+/* Vertical accent bar */
+.accent-vertical {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--color-blue);
+  z-index: 100;
+}
+
+/* Horizontal accent bar */
+.accent-horizontal {
+  width: 100%;
+  height: 6px;
+  background: var(--color-blue);
+}
+
+.site-header {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+
+.logo-link img {
+  height: 48px;
+}
+
+
+/* NAVIGATION */
+.nav-list {
+  display: none; /* hidden on mobile */
+  gap: var(--space-5);
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  padding: var(--space-2) var(--space-4);
+  border: 2px solid var(--color-black);
+  border-radius: var(--radius-sm);
+  color: var(--color-black);
+  background: var(--color-white);
+}
+
+.nav-list a:hover {
+  background: var(--color-gray);
+}
+
+/* Hamburger */
+.menu-btn {
+  background: none;
+  border: 2px solid var(--color-black);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: 1.25rem;
+}
+
+
+/* ============================================================
+   8. TAGLINE (shared on all pages)
+   ============================================================ */
+.tagline {
+  text-align: center;
+  padding: var(--space-4) var(--space-2);
+  font-family: var(--font-serif);
+  font-size: var(--fs-md);
+}
+
+
+/* ============================================================
+   9. FOOTER
+   ============================================================ */
+
+.site-footer {
+  background: var(--color-gray);
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.footer-nav a {
+  padding: var(--space-2) var(--space-4);
+  border: 2px solid var(--color-black);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--color-black);
+  background: var(--color-white);
+}
+
+.footer-nav a:hover {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+
+
+/* ============================================================
+   10. RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+@media (min-width: 600px) { /* Tablet */
+  .nav-list {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .tagline {
+    font-size: var(--fs-lg);
+  }
+}
+
+
+@media (min-width: 900px) { /* Desktop */
+  h1 { font-size: var(--fs-3xl); }
+  h2 { font-size: var(--fs-2xl); }
+
+  .logo-link img {
+    height: 64px;
+  }
+
+  .header-inner {
+    padding: var(--space-6);
+  }
+}
