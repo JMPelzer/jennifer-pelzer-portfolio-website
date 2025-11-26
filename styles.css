@@ -178,17 +178,19 @@ p, li {
 .site-header {
   background: var(--color-white);
   border-bottom: 1px solid var(--color-gray);
-  border-bottom: 0.35rem solid var(--color-plum);
+  border-bottom: 0.35rem solid var(--color-blue);
 }
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-4);
+  padding: var(--space-3) var(--space-4);;
 }
 .logo-link img {
-  height: 4rem;
- 
+  height: 5.5rem;     /* or 6rem, 8rem — test what you want */
+  width: auto;      /* overrides global max-width behavior */
+  max-width: none;  /* IMPORTANT: stops global rule from shrinking it */
+  flex-shrink: 0;
 }
 
 /* Mobile nav hidden */
@@ -203,21 +205,7 @@ p, li {
   font-size: 1.5rem;
 }
 
-/* =========================================================
-   ACCENT BARS
-   ========================================================= */
-/* FIXED LEFT VERTICAL BAR */
-.accent-vertical {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 2rem;                  /* increased from 1rem → better balance */
-  width: 0.4rem;
-  background: var(--color-blue);
-  border-radius: var(--radius-sm);
-  pointer-events: none;     
-  z-index: 0;
-}
+
 
 /* =========================================================
    HERO BANNER (mobile first)
@@ -250,9 +238,36 @@ p, li {
   margin: 0 auto;
 }
 
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  background: var(--color-gray);
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+}
+.footer-nav ul {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer-nav a {
+  padding: var(--space-2) var(--space-4);
+  border: 2px solid var(--color-black);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  text-decoration: none;
+  color: var(--color-black);
+}
+.footer-nav a:hover {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
 
-
-
+/* =========================================================
+   INDEX:HTML HOME/LANDING PAGE
+   ========================================================= */
 
 
 
@@ -300,7 +315,7 @@ p, li {
   border-radius: var(--radius-md);
   padding: var(--space-4);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--space-4);
   justify-items: center;
 }
@@ -355,32 +370,7 @@ p, li {
 
 
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
-.site-footer {
-  background: var(--color-gray);
-  text-align: center;
-  padding: var(--space-6) var(--space-4);
-}
-.footer-nav ul {
-  display: flex;
-  gap: var(--space-3);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.footer-nav a {
-  padding: var(--space-2) var(--space-4);
-  border: 2px solid var(--color-black);
-  border-radius: var(--radius-sm);
-  background: var(--color-white);
-  text-decoration: none;
-  color: var(--color-black);
-}
-.footer-nav a:hover {
-  background: var(--color-blue);
-  color: var(--color-white);
-}
+
 
 /* =========================================================
    RESPONSIVE BREAKPOINTS (MOBILE → UP)
@@ -398,7 +388,7 @@ p, li {
     --body-size: 1.25rem;  /* 20px */
   }
 
-  .logo-link img { height: 4rem; }
+  .logo-link img { height: 5.5rem; }
 
   .nav-list {
     display: flex;
@@ -471,8 +461,23 @@ p, li {
     --body-size: 1.375rem; /* 22px */
   }
 
+    .site-header {
+    display: flex;
+    justify-content: center;
+    background: var(--color-white);
+    border-bottom: 0.35rem solid var(--color-blue);
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-2);
+  }
+
+  .header-inner {
+    width: 100%;
+    max-width: var(--container-width); /* matches hero banner width */
+    padding: 0 var(--space-4);          /* same horizontal padding */
+  }
+}
   .logo-link img {
-    height: 4.5rem;
+    height: 6rem;
   }
 
   .hero-banner {
