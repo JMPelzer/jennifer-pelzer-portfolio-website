@@ -64,13 +64,14 @@ table { border-collapse: collapse; }
   --fs-3xl: 3.5rem;     /* 56px */
 
    /* Headings (mobile first) */
-  --h1-size: var(--fs-2xl);   /* 44px */
-  --h2-size: var(--fs-xl);    /* 32px */
-  --h3-size: var(--fs-lg);    /* 24px */
-  --h4-size: var(--fs-md);    /* 20px */
+--h1-size: 2.25rem;  /* 36px */
+--h2-size: 1.75rem;  /* 28px */
+--h3-size: 1.375rem; /* 22px */
+--h4-size: 1.25rem;  /* 20px */
+--body-size: 1.125rem; /* 18px */
 
    /* Body */
-  --body-size: var(--fs-sm);  /* 18px */
+  --body-size: var(--fs-md);  /* 18px */
 
   /* Line heights */
   --lh-tight: 1.2;
@@ -107,9 +108,16 @@ body {
   background: var(--color-white);
 }
 
-main {
+
+/* Layout helpers */
+.container {
+  max-width: var(--container-width);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: var(--space-4);
- 
+  padding-right: var(--space-4);
+  box-sizing: border-box;
 }
 
 img {
@@ -143,34 +151,34 @@ img {
 h1 {
   font-size: var(--h1-size);
   line-height: var(--lh-tight);
+   font-family: var(--font-serif);
 }
 
 h2 {
   font-size: var(--h2-size);
   line-height: var(--lh-tight);
+   font-family: var(--font-serif);
 }
 
 h3 {
   font-size: var(--h3-size);
   line-height: var(--lh-normal);
+   font-family: var(--font-serif);
 }
 
 h4 {
   font-size: var(--h4-size);
   line-height: var(--lh-normal);
+   font-family: var(--font-serif);
 }
 
 p, li {
   font-size: var(--body-size);
   line-height: var(--lh-relaxed);
+  font-family: var(--font-body);
 }
 
-/* Layout helpers */
-.container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 var(--space-4);
-}
+
 
 /* =========================================================
    HEADER + NAVIGATION (mobile first)
@@ -230,9 +238,7 @@ p, li {
 .hero-banner p {
   color: var(--color-white);
 }
- .hero-subtitle{
-  font-size: 1.2rem;
-}
+
 .hero-icon img {
   width: 6rem;
   margin: 0 auto;
@@ -269,7 +275,72 @@ p, li {
    INDEX:HTML HOME/LANDING PAGE
    ========================================================= */
 
+   /* INTRO SECTION */
+.intro-section {
+  max-width: 55rem;                  
+  margin: var(--space-10) auto var(--space-8);
+  text-align: center;
+  padding: 0 var(--space-4);
+}
 
+.intro-section h1 {
+  
+  color: var(--color-plum);
+  margin-bottom: var(--space-4);
+  line-height: 1.3;
+}
+
+
+.intro-divider {
+  width: 6rem;
+  height: 0.35rem;
+  background: var(--color-blue);
+  margin: var(--space-4) auto;
+  border-radius: var(--radius-sm);
+}
+
+.intro-section .intro-text {
+  
+  line-height: var(--lh-relaxed);
+  color: #333;                      
+  max-width: 42rem;
+  margin: 0 auto var(--space-6);
+}
+
+.featured-title {
+  max-width: var(--container-width);
+  margin: var(--space-10) auto var(--space-6);
+  padding: 0 var(--space-4);
+  font-family: var(--font-serif);
+  color: var(--color-plum);
+}
+
+.project-gallery {
+  margin: var(--space-8) auto;
+  max-width: var(--container-width);   
+  padding: 0 var(--space-4);  
+}
+
+.project-list img {
+  width: 100%;
+  max-width: 100%;         /* ensures full width */
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  object-fit: cover;
+}
+
+.project-list li {
+  list-style: none;
+}
+
+.project-list img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  object-fit: cover;         /* ensures consistent presentation */
+}
 
 
 
@@ -306,22 +377,23 @@ p, li {
 }
 
 /* =============== TECH ICON GRID =============== */
+/* MOBILE — icons wrap properly */
 .tech-stack {
+  max-width: 30rem;
   margin: var(--space-8) auto;
 }
 
 .tech-stack .icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4.5rem, 1fr));
+  gap: var(--space-4);
+  padding: var(--space-4);
   border: 3px solid var(--color-black);
   border-radius: var(--radius-md);
-  padding: var(--space-4);
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: var(--space-4);
-  justify-items: center;
 }
 
 .icons-grid img {
-  width: 3.8rem;
+  width: 3.5rem;
   height: auto;
 }
 
@@ -355,19 +427,8 @@ p, li {
 }
 
 .skills p {
-  font-size: var(--fs-md);
   margin-bottom: var(--space-3);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -381,11 +442,11 @@ p, li {
 @media (min-width: 48em) {
 
   :root {
-    --h1-size: 3.25rem;    /* 52px */
-    --h2-size: 2.5rem;     /* 40px */
-    --h3-size: 1.75rem;    /* 28px */
-    --h4-size: 1.375rem;   /* 22px */
-    --body-size: 1.25rem;  /* 20px */
+--h1-size: 2.75rem;  /* 44px */
+--h2-size: 2rem;     /* 32px */
+--h3-size: 1.5rem;   /* 24px */
+    --h4-size: 1.375rem; /* 22px */
+    --body-size: 1.25rem; /* 20px */
   }
 
   .logo-link img { height: 5.5rem; }
@@ -405,15 +466,15 @@ p, li {
     margin: var(--space-8) auto;
   }
 
-  .hero-subtitle {
-    font-size: 1.3rem;
-  }
 
   .hero-icon img {
     width: 7rem;
   }
 
-  /* CONNECT — tablet adjustments */
+   .intro-section {
+    max-width: 40rem; 
+  }
+  
   .connect-banner {
     max-width: 50rem;
     margin: 0 auto var(--space-8);
@@ -435,6 +496,10 @@ p, li {
   }
 
   /* TECH ICON GRID — 5×2 layout */
+
+   .tech-stack {
+    max-width: 50rem;
+  }
   .tech-stack .icons-grid {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -454,11 +519,11 @@ p, li {
 @media (min-width: 75em) {
 
   :root {
-    --h1-size: 4rem;       /* 64px */
-    --h2-size: 3rem;       /* 48px */
-    --h3-size: 2.25rem;    /* 36px */
-    --h4-size: 1.5rem;     /* 24px */
-    --body-size: 1.375rem; /* 22px */
+--h1-size: 3.25rem;  /* 52px */
+--h2-size: 2.5rem;   /* 40px */
+--h3-size: 1.75rem;  /* 28px */
+--h4-size: 1.5rem;    /* 24px */
+--body-size: 1.375rem; /* 22px */
   }
 
     .site-header {
@@ -475,7 +540,7 @@ p, li {
     max-width: var(--container-width); /* matches hero banner width */
     padding: 0 var(--space-4);          /* same horizontal padding */
   }
-}
+
   .logo-link img {
     height: 6rem;
   }
@@ -485,15 +550,18 @@ p, li {
     margin: var(--space-10) auto;
   }
 
-  .hero-subtitle {
-    font-size: 1.4rem;
-  }
+
 
   .hero-icon img {
     width: 8rem;
   }
 
-  /* CONNECT — desktop */
+   .intro-section {
+    max-width: 70rem; 
+  }
+  
+
+  /* CONNECT HTML */
   .connect-banner {
     max-width: 60rem;
     margin: 0 auto var(--space-8);
@@ -514,7 +582,11 @@ p, li {
     margin-bottom: 1.5rem;
   }
 
-  /* TECH ICON GRID — bigger icons */
+  /* TECH ICON GRID  */
+
+  .tech-stack {
+    max-width: 65rem;
+  }
   .tech-stack .icons-grid {
     grid-template-columns: repeat(10, 1fr);
     gap: var(--space-6);
@@ -533,12 +605,6 @@ p, li {
     margin-bottom: var(--space-10);
   }
 
-  .skills h2 {
-    font-size: var(--fs-2xl);
-    margin-bottom: var(--space-6);
-  }
 
-  .skills p {
-    font-size: var(--fs-lg);
-  }
+
 }
