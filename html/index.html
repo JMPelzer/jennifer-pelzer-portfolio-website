@@ -30,22 +30,37 @@
       <!-- NAVIGATION -->
       <nav class="main-nav" aria-label="Main navigation">
 
-        <!-- Mobile hamburger button -->
-        <button id="menu-btn"
-                class="menu-btn"
-                aria-expanded="false"
-                aria-controls="primary-nav"
-                aria-label="Toggle navigation">
-          ☰
-        </button>
+  <!-- Mobile hamburger button -->
+  <button id="menu-btn"
+          class="menu-btn"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Toggle navigation">
+    ☰
+  </button>
 
-        <ul id="primary-nav" class="nav-list">
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="connect.html">Stack</a></li>
-        </ul>
+  <ul id="primary-nav" class="nav-list">
+    <li class="has-submenu">
+      <a href="#work-menu"
+         class="work-link"
+         aria-haspopup="true"
+         aria-expanded="false">
+        Work ▾
+      </a>
 
-      </nav>
+      <ol id="work-menu" class="work-submenu" aria-label="Project list">
+        <li><a href="projectBM.html">Birthday Messaging</a></li>
+        <li><a href="projectLibrary.html">Library App</a></li>
+         <li><a href="projectPrague.html">Prague Explorer</a></li>
+        <li><a href="projectRocketBikes.html">Rocket Bikes</a></li>
+      </ol>
+    </li>
+
+    <li><a href="about.html">About</a></li>
+    <li><a href="connect.html">Stack</a></li>
+  </ul>
+
+</nav>
 
     </div>
     
@@ -106,7 +121,7 @@
     <a href="projectBM.html" class="btn-primary">View Project</a>
   </div>
 </article>
-</section>
+
 
 
 <!-- PROJECT 2 -->
@@ -169,9 +184,15 @@
     <a href="projectRocketBikes.html" class="btn-primary">View Project</a>
   </div>
 </article>
-
+</section>
 
   </main>
+
+  <button id="back-to-top"
+        class="back-to-top"
+        aria-label="Return to top of page">
+   ↑
+</button>
 
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer" role="contentinfo">

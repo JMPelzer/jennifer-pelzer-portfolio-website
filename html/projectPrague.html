@@ -28,24 +28,39 @@
       </a>
 
       <!-- NAVIGATION -->
-      <nav class="main-nav" aria-label="Main navigation">
+           <nav class="main-nav" aria-label="Main navigation">
 
-        <!-- Mobile hamburger button -->
-        <button id="menu-btn"
-                class="menu-btn"
-                aria-expanded="false"
-                aria-controls="primary-nav"
-                aria-label="Toggle navigation">
-          ☰
-        </button>
+  <!-- Mobile hamburger button -->
+  <button id="menu-btn"
+          class="menu-btn"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Toggle navigation">
+    ☰
+  </button>
 
-        <ul id="primary-nav" class="nav-list">
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="connect.html">Stack</a></li>
-        </ul>
+  <ul id="primary-nav" class="nav-list">
+    <li class="has-submenu">
+      <a href="#work-menu"
+         class="work-link"
+         aria-haspopup="true"
+         aria-expanded="false">
+        Work ▾
+      </a>
 
-      </nav>
+       <ol id="work-menu" class="work-submenu" aria-label="Project list">
+        <li><a href="projectBM.html">Birthday Messaging</a></li>
+        <li><a href="projectLibrary.html">Library App</a></li>
+         <li><a href="projectPrague.html">Prague Explorer</a></li>
+        <li><a href="projectRocketBikes.html">Rocket Bikes</a></li>
+      </ol>
+    </li>
+
+    <li><a href="about.html">About</a></li>
+    <li><a href="connect.html">Stack</a></li>
+  </ul>
+
+</nav>
 
     </div>
     
@@ -74,11 +89,139 @@
 
 
 
-    <!-- Replace this with page-specific content -->
-    <h1>PRAUGE PROJECT PAGE</h1>
-    <p>Page content goes here...</p>
+    <!-- CASE STUDY WRAPPER -->
+<section class="case-study">
+
+  <!-- TITLE -->
+  <header class="case-study-header">
+    <h1 class="case-study-title">CASE STUDY: Prague Tourism</h1>
+    <p class="case-study-subtitle">Designing a Digital Gateway to Exploration</p>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <figure class="case-study-hero">
+    <img src="../assets/images/Prague_Cover.jpeg"
+         alt="Prague Tourism homepage featuring city skyline at sunset and navigation for trip planning">
+  </figure>
+  <figcaption>
+        Homepage design introducing an immersive, modern experience to encourage exploration. 
+      
+      </figcaption>
+  <!-- BACKGROUND -->
+  <section class="cs-section" aria-labelledby="background-heading">
+    <h2 id="background-heading">Background</h2>
+    <p>
+      The Prague Tourism project was designed as a single-page experience to guide and inspire 
+      travelers exploring one of Europe’s most picturesque destinations. Built as a modern, 
+      responsive website, it highlights attractions, hotels, weather details, and local experiences 
+      using interactive tools that make exploring Prague engaging and accessible. 
+      The intent was to blend visual immersion with functional clarity. 
+      
+    </p>
+  </section>
+
+  <!-- CHALLENGE -->
+  <section class="cs-section" aria-labelledby="challenge-heading">
+    <h2 id="challenge-heading">Challenge</h2>
+    <p>
+      Tourism websites often overwhelm users with cluttered navigation, excessive content, 
+      and outdated interactions. The challenge for this project was to create a clean, 
+      intuitive, and engaging single-page layout that delivered essential travel information 
+      while encouraging users to explore Prague’s cultural and historical landscapes.
+      
+    </p>
+
+    <figure class="cs-image">
+      <img src="../assets/images/Prague_image4.png"
+           alt="">
+      
+    </figure>
+    <figure class="cs-image">
+      <img src="../assets/images/Prague-Image5.png"
+           alt="">
+      
+    </figure>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="cs-section" aria-labelledby="process-heading">
+    <h2 id="process-heading">Process</h2>
+
+    <p>
+      The site was structured as a single-page application using HTML, CSS, and JavaScript. 
+      A clear content hierarchy guided users through major sections including: 
+    </p>
+
+    <ul>
+      <li>Hero section introducing Prague</li>
+      <li>Hotels and accommodations</li>
+      <li>Top attractions</li>
+      <li>Live weather integration</li>
+      <li>FAQs and user-controlled interactive tools</li>
+    </ul>
+
+    <p>
+      To enhance interactivity, I implemented a jQuery carousel for attractions, a live weather 
+      API using AJAX, and Web Storage that lets users save their favorite destinations. 
+      I tested the layout across multiple devices, refining contrast, spacing, and responsiveness 
+      based on usability feedback. The focus was to create a seamless blend of exploration, 
+      interactivity, and accessibility.
+      
+    </p>
+
+    <figure class="cs-image">
+      <img src="../assets/images/Prague_imgae1.png"
+           alt="Web flow diagram showing carousel, weather API, FAQ accordion, and Web Storage connections">
+      <figcaption>
+        Web Flow Diagram illustrating how interactive components connect: AJAX weather API, 
+        jQuery FAQ accordion, carousel, and Web Storage. 
+        
+      </figcaption>
+    </figure>
+
+    <figure class="cs-image">
+      <img src="../assets/images/Prague_image2.png"
+           alt="Final Prague Tourism site in both light mode and dark mode, showing attractions and weather">
+      <figcaption>
+        Final build showcasing jQuery carousel, live weather API, Web Storage favorites, and 
+        both light and dark mode UI variations.
+        
+      </figcaption>
+    </figure>
+
+  </section>
+
+  <!-- RESULTS -->
+  <section class="cs-section" aria-labelledby="results-heading">
+    <h2 id="results-heading">Results</h2>
+
+    <p>
+      The completed Prague Tourism website provides a visually rich, intuitive experience that 
+      helps travelers quickly discover key attractions, explore local culture, and plan their visit. 
+      With interactive tools and a streamlined structure, users can check real-time weather, browse 
+      hotels, and curate a list of favorites—all within a clean, accessible, single-page interface.
+      
+    </p>
+
+     <p>
+      Explore the live site:
+      <a href="https://jmpelzer.github.io/git-418-prague/" target="_blank">
+       Prague Demo
+      </a>
+    </p>
+
+  </section>
+
+</section>
+
 
   </main>
+
+  <button id="back-to-top"
+        class="back-to-top"
+        aria-label="Return to top of page">
+   ↑
+</button>
 
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer" role="contentinfo">
@@ -97,7 +240,7 @@
   </footer>
 
   <!-- Global JS -->
-  <script src="../js/main.js"></script>
+  <script src="../main.js"></script>
 
 </body>
 </html>

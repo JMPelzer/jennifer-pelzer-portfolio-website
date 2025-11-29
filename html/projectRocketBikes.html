@@ -28,24 +28,39 @@
       </a>
 
       <!-- NAVIGATION -->
-      <nav class="main-nav" aria-label="Main navigation">
+            <nav class="main-nav" aria-label="Main navigation">
 
-        <!-- Mobile hamburger button -->
-        <button id="menu-btn"
-                class="menu-btn"
-                aria-expanded="false"
-                aria-controls="primary-nav"
-                aria-label="Toggle navigation">
-          ☰
-        </button>
+  <!-- Mobile hamburger button -->
+  <button id="menu-btn"
+          class="menu-btn"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Toggle navigation">
+    ☰
+  </button>
 
-        <ul id="primary-nav" class="nav-list">
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="connect.html">Stack</a></li>
-        </ul>
+  <ul id="primary-nav" class="nav-list">
+    <li class="has-submenu">
+      <a href="#work-menu"
+         class="work-link"
+         aria-haspopup="true"
+         aria-expanded="false">
+        Work ▾
+      </a>
 
-      </nav>
+      <ol id="work-menu" class="work-submenu" aria-label="Project list">
+        <li><a href="projectBM.html">Birthday Messaging</a></li>
+        <li><a href="projectLibrary.html">Library App</a></li>
+         <li><a href="projectPrague.html">Prague Explorer</a></li>
+        <li><a href="projectRocketBikes.html">Rocket Bikes</a></li>
+      </ol>
+    </li>
+
+    <li><a href="about.html">About</a></li>
+    <li><a href="connect.html">Stack</a></li>
+  </ul>
+
+</nav>
 
     </div>
     
@@ -73,14 +88,117 @@
 </section>
 
   <!-- ================= PAGE CONTENT ================= -->
-  <main id="main-content" tabindex="-1">
+  <section class="case-study">
+
+  <!-- TITLE SECTION -->
+  <header class="case-study-header">
+    <h1 class="case-study-title">CASE STUDY: Rocket Bikes</h1>
+    <p class="case-study-subtitle">Creating an Engaging eCommerce Journey</p>
+  </header>
+
+  <!-- FEATURE IMAGE -->
+  <figure class="case-study-hero">
+    <img src="../assets/images/Rocket_Bikes_Hero.png"
+         alt="Rocket Bikes landing page mockup featuring dark mode hero section">
+  </figure>
+
+  <!-- BACKGROUND -->
+  <section class="cs-section" aria-labelledby="background-heading">
+    <h2 id="background-heading">Background</h2>
+    <p>
+      Rocket Bikes represents a conceptual e-commerce landing page designed to
+      showcase a select product lineup that emphasizes speed, clarity, and modern
+      design. The primary objective of this project was to simulate a professional
+      shopping experience while ensuring a playful and engaging interface for users.
+      
+    </p>
+  </section>
+
+  <!-- CHALLENGE -->
+  <section class="cs-section" aria-labelledby="challenge-heading">
+    <h2 id="challenge-heading">Challenge</h2>
+    <p>
+      The objective was to develop a responsive single-page website that showcased
+      advanced front-end development skills while maintaining an intuitive and
+      user-friendly shopping environment. This required dynamic product features,
+      clear calls to action, and a cohesive visual aesthetic aligned with the brand.
+      
+    </p>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="cs-section" aria-labelledby="process-heading">
+    <h2 id="process-heading">Process</h2>
+    <p>
+      The site was structured around a 1280-pixel grid system and built with semantic
+      HTML and CSS variables to maintain visual consistency. Using JavaScript, I
+      implemented multiple interactive features — including a product switcher, a cost
+      calculator, a dark/light mode toggle, and a playful dice mini-game — all enhancing
+      user engagement. Accessibility standards were prioritized, and debugging ensured
+      smooth performance across browsers and devices.
+    
+    </p>
+
+    <figure class="cs-image">
+      <img src="../assets/images/RocketBikes_image1.png"
+           alt="Full Rocket Bikes landing page preview">
+      <figcaption>
+        Image 1: Full landing page mockup showcasing responsive design and brand style.
+      </figcaption>
+    </figure>
+
+    <figure class="cs-image">
+      <img src="../assets/images/RocketBikes_image5.png"
+           alt="Rocket Bikes contact form showing validation and success message">
+      <figcaption>
+        Image 2: Contact form with real-time validation for required fields, error
+        messaging, and success confirmation. 
+      </figcaption>
+    </figure>
+
+    <figure class="cs-image">
+      <img src="../assets/images/RocketBikes_image3.png"
+           alt="Dark mode and light mode comparison of Rocket Bikes site">
+      <figcaption>
+        Image 3: Light and dark mode interface options demonstrating flexible color
+        theming and accessibility-focused design.
+      </figcaption>
+    </figure>
+
+  </section>
+
+  <!-- RESULTS -->
+  <section class="cs-section" aria-labelledby="results-heading">
+    <h2 id="results-heading">Results</h2>
+    <p>
+      The final site is a responsive, interactive landing page that highlights both strong
+      technical capability and attention to detail. It presents a cohesive brand identity
+      and delivers a seamless user experience that mirrors a vibrant, modern retail
+      environment.
+    </p>
+
+    <p>
+      Explore the live site:
+      <a href="https://jmpelzer.github.io/GIT-417-Final-Project/" target="_blank">
+        Rocket Bikes Demo
+      </a>
+    </p>
+  </section>
+
+</section>
+
 
     
-    <h1>ROCKET BIKES PAGE</h1>
-    <p>Page content goes here...</p>
+  <!-- CASE STUDY WRAPPER -->
+
+
 
   </main>
-
+<button id="back-to-top"
+        class="back-to-top"
+        aria-label="Return to top of page">
+   ↑
+</button>
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer" role="contentinfo">
 
@@ -98,7 +216,7 @@
   </footer>
 
   <!-- Global JS -->
-  <script src="../js/main.js"></script>
+   <script src="../main.js"></script>
 
 </body>
 </html>
