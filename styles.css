@@ -258,7 +258,9 @@ p, li {
   line-height: 1;
   cursor: pointer;
 }
-
+.nav-open {
+  display: flex !important;
+}
 /* ------------------------- WORK SUBMENU -------------------------- */
 
 .has-submenu {

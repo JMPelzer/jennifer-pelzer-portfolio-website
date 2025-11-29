@@ -1,15 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // =========================
-  // MOBILE NAV TOGGLE
+  // MOBILE NAV TOGGLE (Hamburger)
   // =========================
-    // Work dropdown toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const primaryNav = document.getElementById('primary-nav');
+
+  if (menuBtn && primaryNav) {
+    menuBtn.addEventListener('click', () => {
+      const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+      primaryNav.classList.toggle('nav-open');
+    });
+  }
+
+
+  // =========================
+  // WORK DROPDOWN (Desktop + Mobile)
+  // =========================
   const workLink = document.querySelector('.work-link');
   const workMenu = document.querySelector('.work-submenu');
 
   if (workLink && workMenu) {
     workLink.addEventListener('click', (e) => {
-      // stop the link from jumping the page
       e.preventDefault();
 
       const isOpen = workMenu.classList.contains('open');
@@ -18,8 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ... your back-to-top code if present ...
-});
 
   // =========================
   // BACK TO TOP BUTTON
@@ -34,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+});
 
 
 
