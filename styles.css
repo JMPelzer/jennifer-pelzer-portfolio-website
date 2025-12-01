@@ -84,6 +84,7 @@ table { border-collapse: collapse; }
   --space-6: 2rem;
   --space-8: 3rem;
   --space-10: 4rem;
+  --space-12: 5rem;
 
   /* Radius */
   --radius-sm: 4px;
@@ -277,10 +278,10 @@ p, li {
   position: absolute;
   top: 100%;
   left: 0;
-
-  width: 14rem;
+  right: auto;
+  width: 9.5rem;
   list-style: none;
-
+  transform: translateX(-3.5rem);
   background: var(--color-white);
   padding: var(--space-3);
   margin: 0;
@@ -735,7 +736,7 @@ p, li {
 }
 
 /* =========================================================
-   CASE STUDY COMPONENT — MOBILE FIRST
+   CASE STUDY 
    ========================================================= */
   .case-study {
   max-width: 60rem;
@@ -746,24 +747,47 @@ p, li {
 /* Header */
 .case-study-header {
   margin-bottom: var(--space-8);
+  text-align: center;
 }
 
 .case-study-title {
   font-family: var(--font-serif);
-  font-size: var(--h1-size);
+  font-size: var(--fs-xl);        /* comfortable size for mobile */
   color: var(--color-plum);
-  margin-bottom: var(--space-3);
-  line-height: var(--lh-tight);
+  line-height: 1.25;
+}
+
+/* Two lines on mobile */
+.case-study-title .cs-label,
+.case-study-title .cs-name {
+  display: block;
+}
+
+/* Optional fine-tuning */
+.case-study-title .cs-label {
+  letter-spacing: 0.06em;
+}
+
+.case-study-title .cs-name {
+  margin-top: 0.25rem;
 }
 
 .case-study-subtitle {
   font-size: var(--fs-md);
+  display: block; 
+   margin-top: 0; 
+   margin-bottom: var(--space-6);
   line-height: var(--lh-relaxed);
-  max-width: 40rem;
+  max-width: 45rem;
   color: var(--color-text);
+   
 }
 
 /* Hero image */
+.case-study-hero {
+  margin-bottom: var(--space-10);   /* Space above Background heading */
+}
+
 .case-study-hero img {
   width: 100%;
   height: auto;
@@ -811,7 +835,8 @@ p, li {
   font-size: var(--fs-xs);
   color: var(--color-text);
   text-align: center;
-  margin-top: var(--space-2);
+  margin-top: var(--space-3);
+  line-height: 1.4;
 }
 
 /* Lists */
@@ -1030,18 +1055,45 @@ p, li {
   }
 
   .case-study-header {
-    margin-bottom: var(--space-10);
+     margin-top: var(--space-10);
+  margin-bottom: var(--space-10);
+    text-align: center;
   }
+
+  .case-study-hero img {
+  max-width: 46rem; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-10);
+}
 
   .case-study-title {
     font-size: 2.5rem;
+    text-align: center;
+  }
+
+  /* Back to one line */
+  .case-study-title .cs-label,
+  .case-study-title .cs-name {
+    display: inline;
+  }
+
+  .case-study-title .cs-name {
+    margin-top: 0;         /* cancel mobile margin */
+    margin-left: 0.25rem;  /* small gap after the colon */
   }
 
   .case-study-subtitle {
     font-size: var(--fs-lg);
     max-width: 48rem;
+     margin-left: auto;
+  margin-right: auto;
+   margin-bottom: var(--space-8);
   }
 
+  .cs-section {
+  margin-bottom: var(--space-12);
+}
   .cs-section h2 {
     font-size: 1.75rem;
   }
@@ -1064,7 +1116,9 @@ p, li {
   }
 
   .cs-image figcaption {
-    text-align: left;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 /* -------------------------------------- DESKTOP 1200px------------------------- ---------- */
@@ -1180,38 +1234,89 @@ p, li {
     padding: var(--space-10) var(--space-8);
   }
    /* ------------------Case Study HTML Pages------------------ */
-    .case-study {
-    max-width: 70rem;
-  }
+   .case-study {
+  max-width: 70rem;
+}
 
+.case-study-header {
+  text-align: center;
+}
+
+/* Titles */
   .case-study-title {
     font-size: 2.75rem;
   }
 
-  .case-study-subtitle {
-    font-size: var(--fs-xl);
-    line-height: var(--lh-relaxed);
-    max-width: 52rem;
+  .case-study-title .cs-label,
+  .case-study-title .cs-name {
+    display: inline;
   }
 
-  .cs-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--space-4);
+  .case-study-title .cs-name {
+    margin-left: 0.25rem;
   }
 
-  .cs-section p {
-    font-size: var(--fs-lg);
-    line-height: 1.75;
-  }
+.case-study-subtitle {
+  font-size: var(--fs-xl);
+  line-height: var(--lh-relaxed);
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .cs-image {
-    margin: var(--space-8) 0 var(--space-10);
-  }
+/* Hero image spacing */
+.case-study-hero {
+  margin-bottom: var(--space-12);
+  text-align: center;
+}
+.case-study-hero img {
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .cs-image img {
-    border-radius: var(--radius-lg);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    max-width: 35rem;   /* allow larger images on desktop */
-  }
+/* Section Headings */
+.cs-section h2 {
+   max-width: 55rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Balanced paragraph width */
+.case-study .cs-section p {
+  font-size: var(--fs-lg);
+  line-height: 1.75;
+  max-width: 55rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Image container spacing */
+.cs-image {
+   max-width: 55rem;     
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.case-study img,
+.cs-image img {
+  max-width: 42rem; 
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Captions centered and sized to image */
+.cs-image figcaption {
+  text-align: center !important;
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--space-3);
+  line-height: 1.4;
+}
  
 }
