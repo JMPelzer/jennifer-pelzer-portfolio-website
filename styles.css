@@ -191,9 +191,9 @@ p, li {
   padding: var(--space-3) var(--space-4);
 }
 .logo-link img {
-  height: 4.5rem;
+  height: 3.5rem;
   width: auto;
-  max-width: none;
+  max-width: 100%;
   flex-shrink: 0;
 }
 
@@ -867,7 +867,7 @@ p, li {
   }
 
   .logo-link img {
-    height: 5rem;
+    height: 4rem;
   }
 
   /* -------- nav layout ---------------*/
@@ -1146,7 +1146,7 @@ p, li {
   }
 
   .logo-link img {
-    height: 5.5rem;
+    height: 5rem;
   }
 
  .hero-banner {
