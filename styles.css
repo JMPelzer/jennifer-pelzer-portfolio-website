@@ -190,11 +190,21 @@ p, li {
   align-items: center;
   padding: var(--space-3) var(--space-4);
 }
+
 .logo-link img {
   height: 3.5rem;
-  width: auto;
-  max-width: 100%;
-  flex-shrink: 0;
+  width: 3.5rem;   
+  border-radius: 50%;
+  display: block;
+  transition: all 0.12s ease-out;
+}
+
+
+.logo-link:hover img,
+.logo-link:focus-visible img {
+  outline: 3px solid var(--color-plum);
+  outline-offset: -2px;
+   transform: scale(1.05);
 }
 
 /* Nav list (mobile) */
@@ -269,7 +279,7 @@ p, li {
 }
 
 .work-link {
-  white-space: nowrap; /* keep "Work ▾" on one line */
+  white-space: nowrap; 
 }
 
 /* Dropdown panel */
@@ -533,7 +543,7 @@ p, li {
   border-radius: var(--radius-lg);
   padding: var(--space-6);
   box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  min-height: 22rem; /* makes all cards balanced */
+  min-height: 22rem; 
   display: flex;
   align-items: center;
 }
@@ -650,7 +660,7 @@ p, li {
 }
 
 .values-list img {
-  width: 3.5rem;   /* mobile icon size */
+  width: 3.5rem;   
   height: auto;
   margin-bottom: var(--space-2);
 }
@@ -800,7 +810,7 @@ p, li {
 
 .case-study-title {
   font-family: var(--font-serif);
-  font-size: var(--fs-xl);        /* comfortable size for mobile */
+  font-size: var(--fs-xl);        
   color: var(--color-plum);
   line-height: 1.25;
 }
@@ -833,7 +843,7 @@ p, li {
 
 /* Hero image */
 .case-study-hero {
-  margin-bottom: var(--space-10);   /* Space above Background heading */
+  margin-bottom: var(--space-10);  
 }
 
 .case-study-hero img {
@@ -938,6 +948,13 @@ p, li {
   display: block;
 }
 
+  .logo-link img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+
+
   .back-to-top {
     width: 3.25rem;
     height: 3.25rem;
@@ -1026,7 +1043,7 @@ p, li {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* vertical stretch */
+    justify-content: space-between; 
     align-items: center;
   }
 
@@ -1150,8 +1167,8 @@ p, li {
   }
 
   .case-study-title .cs-name {
-    margin-top: 0;         /* cancel mobile margin */
-    margin-left: 0.25rem;  /* small gap after the colon */
+    margin-top: 0;         
+    margin-left: 0.25rem;  
   }
 
   .case-study-subtitle {
@@ -1217,8 +1234,11 @@ p, li {
   }
 
   .logo-link img {
-    height: 5rem;
+    height: 4.5rem;
+     width: 4.5rem;
   }
+
+  
 
  .hero-banner {
     grid-template-columns: 1fr 10rem;
