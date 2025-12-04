@@ -589,8 +589,10 @@ p, li {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-  margin-bottom: var(--space-4);
+   box-shadow: 
+    0 6px 16px rgba(0,0,0,0.20),
+    0 2px 6px rgba(0,0,0,0.12);
+  margin-bottom: var(--space-5);
 }
 
 .headshot-frame img {
@@ -605,6 +607,10 @@ p, li {
   line-height: 1.75;
   text-align: center;
   margin: 0 auto;
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-6);
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
 }
 
 /* Divider: horizontal on mobile */
@@ -619,6 +625,14 @@ p, li {
 /* Values / qualities */
 .about-values {
   margin-top: var(--space-4);
+   background: #faf7fc;
+  padding: var(--space-6) var(--space-4);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 18rem;
+  margin: var(--space-6) auto;
+  text-align: center;
 }
 
 .values-list {
@@ -642,7 +656,41 @@ p, li {
 }
 
 .values-list span {
+  font-size: var(--fs-md);
+   color: var(--color-plum);
+  font-weight: 600;
+}
+
+/* ===========================
+   ABOUT VIDEO SECTION
+   =========================== */
+.about-video {
+  max-width: 42rem;
+  margin: var(--space-8) auto;
+  text-align: center;
+  padding: 0 var(--space-4);
+}
+
+.about-video video {
+  width: 100%;
+  max-width: 720px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  margin-bottom: var(--space-4);
+}
+
+.video-transcript-link a {
+  font-weight: 600;
   font-size: var(--fs-sm);
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
+.video-transcript-link a:hover,
+.video-transcript-link a:focus-visible {
+  color: var(--color-plum);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
 }
 
 /* =========================================================
@@ -951,59 +999,82 @@ p, li {
   }
 
   /* -----------------About Me HTML Page Layout----------- */
-  .about-page {
-    margin-top: var(--space-10);
-    margin-bottom: var(--space-10);
-  }
-
-  .about-layout {
+   .about-layout {
     display: grid;
     grid-template-columns: 0.7fr auto 1.3fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto auto;   
     column-gap: var(--space-8);
     align-items: start;
   }
 
+  /* ICON COLUMN (left) */
   .about-values {
     grid-column: 1;
-    grid-row: 1;
-    margin-top: 0;
-    padding-right: var(--space-6);
-  }
-
-  .about-divider {
-    grid-column: 2;
-    grid-row: 1;
-    width: 0.35rem;
-    height: 100%;
+    grid-row: 1 / span 2;  
+    align-self: stretch;
+     padding-right: var(--space-6);
+    background: #faf7fc;
+    padding: var(--space-6) var(--space-4);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06); 
+    max-width: 14rem;
     margin: 0 auto;
-  }
-
-  .about-main {
-    grid-column: 3;
-    grid-row: 1;
-    margin: 0;
-    text-align: left;
-  }
-
-  .about-text {
-    text-align: left;
-    font-size: var(--fs-lg);
-     line-height: 1.75;
+              
   }
 
   .values-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* vertical stretch */
     align-items: center;
-    justify-content: flex-start;
-    gap: var(--space-5);
   }
 
   .values-list img {
-    width: 4.5rem;   
+    width: 4.8rem;
   }
 
   .values-list span {
-    font-size: var(--fs-md);
+  font-size: var(--fs-lg);          
+  
+}
+
+  /* DIVIDER COLUMN */
+  .about-divider {
+    grid-column: 2;
+    grid-row: 1 / span 2;  
+    width: 0.35rem;
+    height: 100%;
+    margin: 0 auto;
+    align-self: stretch;
+  }
+
+  /* ABOUT TEXT COLUMN */
+  .about-main {
+    grid-column: 3;
+    grid-row: 1;
+    text-align: center;
+   
+  }
+
+  .about-main .headshot-frame {
+  align-items: center;
+}
+
+  .about-text {
+    font-size: var(--fs-lg);
+    line-height: 1.75;
+     text-align: left;  
+       margin: 0 auto;
+  }
+
+  /* VIDEO BELOW TEXT */
+  .about-video {
+    grid-column: 3;
+    grid-row: 2;
+    text-align: left;
+    max-width: 36rem;
+    margin-top: var(--space-6);
   }
 
   /* -------------------------Connect page----------------- */
@@ -1121,7 +1192,7 @@ p, li {
     margin-right: auto;
   }
 
-/* -------------------------------------- DESKTOP 1200px------------------------- ---------- */
+/* ------------------------------------------------------ DESKTOP 1200px--------------------------------------------------------- ---------- */
 @media (min-width: 75em) {
 
   :root {
@@ -1198,6 +1269,11 @@ p, li {
 
   .values-list span {
     font-size: var(--fs-md);
+  }
+
+    .about-video {
+     max-width: 42rem;
+  margin-top: var(--space-8);
   }
 
   /* -------------------Stack/Connect HTML page------------------- */
@@ -1289,6 +1365,19 @@ p, li {
   max-width: 55rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.case-study .cs-section ul {
+  max-width: 55rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem; 
+  font-size: var(--fs-lg);
+  line-height: 1.75;
+}
+
+.case-study .cs-section ul li {
+  margin-bottom: 0.75rem; 
 }
 
 /* Image container spacing */

@@ -1,0 +1,20 @@
+Hi, I’m Jennifer. I’m a full-stack developer focused on building accessible, intuitive products—where empathy meets engineering.
+
+I create web experiences that are efficient, effective, and enjoyable for all users. My work blends front-end and back-end development, usability testing, and thoughtful design systems.
+
+Accessibility is central to everything I do. Whether I’m beginning a project with accessibility as a primary requirement, or updating an existing site to meet regulations without sacrificing brand identity, my goal is always the same: to enhance usability for everyone.
+
+It’s not just about compliance; it’s about creating experiences that are genuinely user-friendly and engaging.
+
+At BirthdayMessaging, I led an accessibility redesign that improved both the app and the website. I focused on clear semantic structure, reusable React and Tailwind components, and full keyboard navigation. The result was a fully WCAG-compliant interface that improved the experience for all users, including individuals with disabilities, and demonstrated how thoughtful code can meaningfully support people using assistive technologies.
+
+This work continues to guide how I design, build, and evaluate products.
+
+I have experience working in remote and diverse teams, which connects to my multicultural background. I live in Germany with my family and speak English, German, and French.
+
+Living abroad has helped me understand the importance of inclusion, curiosity, and empathy—skills that directly influence how I design for diverse users.
+
+I’m excited about opportunities that prioritize accessibility and product quality.
+Let’s connect to explore how my approach can help your team create more inclusive experiences.
+
+Thank you for your time. It was great meeting you.
