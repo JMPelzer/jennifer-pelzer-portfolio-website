@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rocket Bikes Case Study | Jennifer Pelzer Portfolio</title>
+
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Accessible keyboard skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <!-- Logo / Home -->
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/JP_logo.png"
+             alt="JP — Home page of Jennifer Pelzer">
+      </a>
+
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <button id="menu-btn"
+                class="menu-btn"
+                aria-expanded="false"
+                aria-controls="primary-nav"
+                aria-label="Toggle navigation">
+          ☰
+        </button>
+
+        <ul id="primary-nav" class="nav-list">
+          <li class="has-submenu">
+            <a href="#work-menu"
+               class="work-link"
+               aria-haspopup="true"
+               aria-expanded="false">
+              Work ▾
+            </a>
+
+            <ol id="work-menu" class="work-submenu" aria-label="Project list">
+              <li><a href="projectBM.html">Birthday Messaging</a></li>
+              <li><a href="projectLibrary.html">Library App</a></li>
+              <li><a href="projectPrague.html">Prague Explorer</a></li>
+              <li><a href="projectRocketBikes.html">Rocket Bikes</a></li>
+            </ol>
+          </li>
+
+          <li><a href="about.html">About</a></li>
+          <li><a href="connect.html">Stack</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ================= PAGE CONTENT ================= -->
+  <main id="main-content" tabindex="-1" class="container">
+
+    <!-- Purple Hero Banner -->
+    <section class="hero-banner" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h2 id="hero-title">Jennifer Pelzer</h2>
+        <p class="hero-subtitle">Accessibility-First Full-Stack Web Developer</p>
+        <p class="hero-subtitle">Designing accessible, intuitive products, where empathy meets engineering.</p>
+      </div>
+
+      <div class="hero-icon">
+        <img 
+          src="assets/icons/blue_accessability.png"
+          alt="Accessibility symbol representing inclusive design"
+        >
+      </div>
+    </section>
+
+    <!-- CASE STUDY WRAPPER -->
+    <section class="case-study">
+
+      <!-- TITLE SECTION -->
+      <header class="case-study-header">
+        <h1 class="case-study-title">
+          <span class="cs-label">CASE STUDY:</span>
+          <span class="cs-name">Rocket Bikes</span>
+        </h1>
+        <p class="case-study-subtitle">Creating an Engaging eCommerce Journey</p>
+      </header>
+
+      <!-- FEATURE IMAGE -->
+      <figure class="case-study-hero">
+        <img src="assets/images/Rocket_Bikes_Hero.png"
+             alt="Rocket Bikes landing page mockup featuring a dark mode hero section">
+      </figure>
+
+      <!-- BACKGROUND -->
+      <section class="cs-section" aria-labelledby="background-heading">
+        <h2 id="background-heading">Background</h2>
+        <p>
+          Rocket Bikes represents a conceptual e-commerce landing page designed to
+          showcase a select product lineup that emphasizes speed, clarity, and modern
+          design. The primary goal was to simulate a professional shopping experience
+          while ensuring a playful and engaging interface for users.
+        </p>
+      </section>
+
+      <!-- CHALLENGE -->
+      <section class="cs-section" aria-labelledby="challenge-heading">
+        <h2 id="challenge-heading">Challenge</h2>
+        <p>
+          The objective was to develop a responsive single-page website that showcased
+          advanced front-end development skills while maintaining an intuitive and
+          user-friendly shopping environment. This required dynamic product features,
+          clear calls to action, and a cohesive visual aesthetic aligned with the brand.
+        </p>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="cs-section" aria-labelledby="process-heading">
+        <h2 id="process-heading">Process</h2>
+
+        <p>
+          The site was structured around a 1280-pixel grid system and built with semantic
+          HTML and CSS variables for consistency. JavaScript powered several interactive
+          features — a product switcher, a cost calculator, a dark/light mode toggle, and
+          a dice mini-game — all designed to enhance engagement. Accessibility and
+          responsive behavior were tested across devices.
+        </p>
+
+        <figure class="cs-image">
+          <img src="assets/images/RocketBikes_image1.png"
+               alt="Full Rocket Bikes landing page preview showing product sections and visual structure">
+          <figcaption>
+            Full landing page mockup showcasing responsive design and brand styling.
+          </figcaption>
+        </figure>
+
+        <figure class="cs-image">
+          <img src="assets/images/RocketBikes_image5.png"
+               alt="Rocket Bikes contact form showing validation messages and success confirmation">
+          <figcaption>
+            Contact form with real-time validation, error messaging, and success confirmation.
+          </figcaption>
+        </figure>
+
+        <figure class="cs-image">
+          <img src="assets/images/RocketBikes_image3.png"
+               alt="Side-by-side view of Rocket Bikes in light mode and dark mode">
+          <figcaption>
+            Light and dark mode interface demonstrating flexible theming and accessible color contrast.
+          </figcaption>
+        </figure>
+
+      </section>
+
+      <!-- RESULTS -->
+      <section class="cs-section" aria-labelledby="results-heading">
+        <h2 id="results-heading">Results</h2>
+
+        <p>
+          The Rocket Bikes website is a responsive, interactive landing page that highlights
+          both strong technical capability and thoughtful design. It presents a cohesive brand
+          identity and delivers an engaging modern shopping experience.
+        </p>
+
+        <p>
+          Explore the live site:
+          <a href="https://jmpelzer.github.io/GIT-417-Final-Project/" target="_blank" rel="noopener">
+            Rocket Bikes Demo
+          </a>
+        </p>
+      </section>
+
+    </section>
+
+  </main>
+
+  <button id="back-to-top"
+          class="back-to-top"
+          aria-label="Return to top of page">
+    ↑
+  </button>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" role="contentinfo">
+    <nav class="footer-nav" aria-label="Footer links">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/jennifer-pelzer-a27243277/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/JMPelzer" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.behance.net/jenniferpelzer1" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="assets/images/DirectResume2025.pdf" target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; <span id="year"></span> Jennifer Pelzer. Accessibility-First Web Development.</p>
+  </footer>
+
+  <!-- Global JS -->
+  <script src="main.js"></script>
+
+</body>
+</html>

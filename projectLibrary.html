@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Williston Park Library Case Study | Jennifer Pelzer Portfolio</title>
+
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Accessible keyboard skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <!-- Logo / Home -->
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/JP_logo.png"
+             alt="JP — Home page of Jennifer Pelzer">
+      </a>
+
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <button id="menu-btn"
+                class="menu-btn"
+                aria-expanded="false"
+                aria-controls="primary-nav"
+                aria-label="Toggle navigation">
+          ☰
+        </button>
+
+        <ul id="primary-nav" class="nav-list">
+          <li class="has-submenu">
+            <a href="#work-menu"
+               class="work-link"
+               aria-haspopup="true"
+               aria-expanded="false">
+              Work ▾
+            </a>
+
+            <ol id="work-menu" class="work-submenu" aria-label="Project list">
+              <li><a href="projectBM.html">Birthday Messaging</a></li>
+              <li><a href="projectLibrary.html">Library App</a></li>
+              <li><a href="projectPrague.html">Prague Explorer</a></li>
+              <li><a href="projectRocketBikes.html">Rocket Bikes</a></li>
+            </ol>
+          </li>
+
+          <li><a href="about.html">About</a></li>
+          <li><a href="connect.html">Stack</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ================= PAGE CONTENT ================= -->
+  <main id="main-content" tabindex="-1" class="container">
+
+    <!-- Purple Hero Banner -->
+    <section class="hero-banner" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h2 id="hero-title">Jennifer Pelzer</h2>
+        <p class="hero-subtitle">Accessibility-First Full-Stack Web Developer</p>
+        <p class="hero-subtitle">Designing accessible, intuitive products, where empathy meets engineering.</p>
+      </div>
+
+      <div class="hero-icon">
+        <img 
+          src="assets/icons/blue_accessability.png"
+          alt="Accessibility symbol representing inclusive design"
+        >
+      </div>
+    </section>
+
+    <!-- CASE STUDY WRAPPER -->
+    <section class="case-study">
+
+      <!-- TITLE -->
+      <header class="case-study-header">
+        <h1 class="case-study-title">CASE STUDY: Williston Park Library</h1>
+        <p class="case-study-subtitle">Building Inclusive Digital Access</p>
+      </header>
+
+      <!-- FEATURE IMAGE -->
+      <figure class="case-study-hero">
+        <img src="assets/images/library_cover.png"
+             alt="Updated Williston Park Library homepage with accessible layout and improved navigation">
+      </figure>
+
+      <!-- BACKGROUND -->
+      <section class="cs-section" aria-labelledby="background-heading">
+        <h2 id="background-heading">Background</h2>
+        <p>
+          This project focused on improving accessibility across the Home, Events, and Contact 
+          pages of the Williston Park Public Library website. As part of my senior capstone, 
+          I redesigned these pages to meet WCAG 2.2 AA standards and ensure a user-friendly 
+          experience for all users, including individuals who rely on screen readers or 
+          keyboard-only navigation.
+        </p>
+      </section>
+
+      <!-- CHALLENGE -->
+      <section class="cs-section" aria-labelledby="challenge-heading">
+        <h2 id="challenge-heading">Challenge</h2>
+        <p>
+          The original site contained accessibility issues such as missing alt text, 
+          unlabeled form inputs, low-contrast colors, incorrect ARIA roles, and 
+          non-semantic markup. These barriers made navigation difficult for blind 
+          and low-vision users and prevented WCAG compliance.
+        </p>
+
+        <figure class="cs-image">
+          <img src="assets/images/Library_image1.png"
+               alt="Before and after Lighthouse accessibility results for the library homepage">
+          <figcaption>
+            Original homepage accessibility score of 75 improved to 100 after redesign—fixes included alt text, labeled inputs, and compliant color tokens.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="cs-section" aria-labelledby="process-heading">
+        <h2 id="process-heading">Process</h2>
+
+        <p>
+          I began with an accessibility audit using Lighthouse, WAVE, and manual keyboard + 
+          screen-reader testing. I rebuilt core structures to improve semantics, operability, 
+          and meaningful feedback.
+        </p>
+
+        <ul>
+          <li>Implemented semantic landmarks and a logical heading hierarchy.</li>
+          <li>Added descriptive alt text and clarified link labels.</li>
+          <li>Improved color contrast and added visible focus outlines.</li>
+          <li>Rebuilt the calendar with proper table headers and a list-view fallback.</li>
+          <li>Corrected ARIA roles and ensured proper form label associations.</li>
+          <li>Replaced the interactive map with an accessible static alternative.</li>
+        </ul>
+
+        <figure class="cs-image">
+          <img src="assets/images/Library_image2.png"
+               alt="Before and after accessibility comparisons for the Events page">
+          <figcaption>
+            Events page improvements included proper ARIA roles, table semantics, and descriptive alt attributes.
+          </figcaption>
+        </figure>
+
+        <figure class="cs-image">
+          <img src="assets/images/Library_image3.png"
+               alt="Before and after redesign of Contact page showing improved form labels and contrast">
+          <figcaption>
+            Contact page rebuild improved form labeling, contrast, and removed inaccessible embedded map.
+          </figcaption>
+        </figure>
+
+        <figure class="cs-image">
+          <img src="assets/images/Library_image4.png"
+               alt="Example of updated semantic HTML and ARIA labels applied to the redesigned library website">
+          <figcaption>
+            The updated HTML structure shows improved semantics, ARIA labeling, and meaningful alt attributes.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- RESULTS -->
+      <section class="cs-section" aria-labelledby="results-heading">
+        <h2 id="results-heading">Results</h2>
+
+        <p>
+          All redesigned pages reached full WCAG 2.2 AA compliance. Lighthouse scores increased 
+          from 75 to 100 across all pages. Keyboard-only navigation now functions smoothly, and 
+          users receive consistent, perceivable feedback throughout the interface.
+        </p>
+
+        <figure class="cs-image">
+          <img src="assets/images/Library-image5.png"
+               alt="Redesigned homepage with clear keyboard focus outlines and compliant colors">
+          <figcaption>
+            Final homepage design features visible focus indicators and WCAG 2.2 AA color contrast.
+          </figcaption>
+        </figure>
+
+        <p>
+          Explore the live site:
+          <a href="https://jmpelzer.github.io/GIT-480-senior-project/" target="_blank" rel="noopener">
+            Library Demo
+          </a>
+        </p>
+      </section>
+
+    </section>
+  </main>
+
+  <!-- Back to top -->
+  <button id="back-to-top"
+          class="back-to-top"
+          aria-label="Return to top of page">
+    ↑
+  </button>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" role="contentinfo">
+
+    <nav class="footer-nav" aria-label="Footer links">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/jennifer-pelzer-a27243277/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/JMPelzer" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.behance.net/jenniferpelzer1" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="assets/images/DirectResume2025.pdf" target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; <span id="year"></span> Jennifer Pelzer. Accessibility-First Web Development.</p>
+  </footer>
+
+  <!-- Global JS -->
+  <script src="main.js"></script>
+
+</body>
+</html>

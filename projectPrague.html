@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Prague Tourism Case Study | Jennifer Pelzer Portfolio</title>
+
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Accessible keyboard skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <!-- Logo / Home -->
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/JP_logo.png"
+             alt="JP — Home page of Jennifer Pelzer">
+      </a>
+
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <button id="menu-btn"
+                class="menu-btn"
+                aria-expanded="false"
+                aria-controls="primary-nav"
+                aria-label="Toggle navigation">
+          ☰
+        </button>
+
+        <ul id="primary-nav" class="nav-list">
+          <li class="has-submenu">
+            <a href="#work-menu"
+               class="work-link"
+               aria-haspopup="true"
+               aria-expanded="false">
+              Work ▾
+            </a>
+
+            <ol id="work-menu" class="work-submenu" aria-label="Project list">
+              <li><a href="projectBM.html">Birthday Messaging</a></li>
+              <li><a href="projectLibrary.html">Library App</a></li>
+              <li><a href="projectPrague.html">Prague Explorer</a></li>
+              <li><a href="projectRocketBikes.html">Rocket Bikes</a></li>
+            </ol>
+          </li>
+
+          <li><a href="about.html">About</a></li>
+          <li><a href="connect.html">Stack</a></li>
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ================= PAGE CONTENT ================= -->
+  <main id="main-content" tabindex="-1" class="container">
+
+    <!-- Purple Hero Banner -->
+    <section class="hero-banner" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h2 id="hero-title">Jennifer Pelzer</h2>
+        <p class="hero-subtitle">Accessibility-First Full-Stack Web Developer</p>
+        <p class="hero-subtitle">Designing accessible, intuitive products, where empathy meets engineering.</p>
+      </div>
+
+      <div class="hero-icon">
+        <img 
+          src="assets/icons/blue_accessability.png"
+          alt="Accessibility symbol representing inclusive design"
+        >
+      </div>
+    </section>
+
+    <!-- CASE STUDY WRAPPER -->
+    <section class="case-study">
+
+      <!-- TITLE -->
+      <header class="case-study-header">
+        <h1 class="case-study-title">
+          <span class="cs-label">CASE STUDY:</span>
+          <span class="cs-name">Prague Tourism</span>
+        </h1>
+        <p class="case-study-subtitle">Designing a Digital Gateway to Exploration</p>
+      </header>
+
+      <!-- HERO IMAGE -->
+      <figure class="case-study-hero">
+        <img src="assets/images/Prague_Cover.png"
+             alt="Prague Tourism homepage featuring the city skyline at sunset and navigation for planning a trip">
+      </figure>
+
+      <!-- BACKGROUND -->
+      <section class="cs-section" aria-labelledby="background-heading">
+        <h2 id="background-heading">Background</h2>
+        <p>
+          The Prague Tourism project was designed as a single-page experience to guide and inspire 
+          travelers exploring one of Europe’s most picturesque destinations. It highlights attractions, 
+          hotels, weather details, and local experiences using interactive tools that blend visual 
+          immersion with functional clarity.
+        </p>
+      </section>
+
+      <!-- CHALLENGE -->
+      <section class="cs-section" aria-labelledby="challenge-heading">
+        <h2 id="challenge-heading">Challenge</h2>
+        <p>
+          Tourism websites often overwhelm users with cluttered navigation and outdated interactions. 
+          The challenge was to create a clean, intuitive single-page layout that delivered essential 
+          travel information while encouraging exploration of Prague’s cultural and historical landscape.
+        </p>
+
+        <figure class="cs-image">
+          <img src="assets/images/Prague_image4.png"
+               alt="Prague tourism web page concept with navigation and highlighted attractions">
+        </figure>
+
+        <figure class="cs-image">
+          <img src="assets/images/Prague-Image5.png"
+               alt="Additional Prague tourism interface showing attraction cards and layout sections">
+        </figure>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="cs-section" aria-labelledby="process-heading">
+        <h2 id="process-heading">Process</h2>
+
+        <p>
+          The site was structured as a single-page application using HTML, CSS, and JavaScript. Major 
+          content sections included:
+        </p>
+
+        <ul>
+          <li>Hero section</li>
+          <li>Hotels and accommodations</li>
+          <li>Top attractions</li>
+          <li>Live weather integration</li>
+          <li>FAQs and user-interactive tools</li>
+        </ul>
+
+        <p>
+          I implemented a jQuery carousel, a live weather API via AJAX, and Web Storage so users could 
+          save favorite destinations. The layout was tested across devices, refining contrast, spacing, 
+          and responsiveness based on usability feedback.
+        </p>
+
+        <figure class="cs-image">
+          <img src="assets/images/Prague_imgae1.png"
+               alt="Flow diagram showing carousel, API calls, accordion FAQ, and local storage connections">
+          <figcaption>
+            Web flow diagram illustrating connections between API, accordion, carousel, and Web Storage features.
+          </figcaption>
+        </figure>
+
+        <figure class="cs-image">
+          <img src="assets/images/Prague_image2.png"
+               alt="Final Prague Tourism interface in light and dark mode with attractions and weather integration">
+          <figcaption>
+            Final build featuring carousel, weather API, favorites storage, and both light and dark mode variations.
+          </figcaption>
+        </figure>
+
+      </section>
+
+      <!-- RESULTS -->
+      <section class="cs-section" aria-labelledby="results-heading">
+        <h2 id="results-heading">Results</h2>
+
+        <p>
+          The final Prague Tourism experience provides a visually rich, intuitive interface that helps 
+          travelers quickly discover attractions, explore local culture, and plan their visit. Interactive 
+          elements such as weather integration and Web Storage favorites make the single-page application 
+          both engaging and highly functional.
+        </p>
+
+        <p>
+          Explore the live site:
+          <a href="https://git-418-prague-n990oxvpf-jennifer-pelzers-projects.vercel.app/" target="_blank" rel="noopener">
+            Prague Demo
+          </a>
+        </p>
+      </section>
+
+    </section>
+
+  </main>
+
+  <!-- Back to top button -->
+  <button id="back-to-top"
+          class="back-to-top"
+          aria-label="Return to top of page">
+    ↑
+  </button>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" role="contentinfo">
+
+    <nav class="footer-nav" aria-label="Footer links">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/jennifer-pelzer-a27243277/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/JMPelzer" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.behance.net/jenniferpelzer1" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="assets/images/DirectResume2025.pdf" target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; <span id="year"></span> Jennifer Pelzer. Accessibility-First Web Development.</p>
+  </footer>
+
+  <!-- Global JS -->
+  <script src="main.js"></script>
+
+</body>
+</html>
