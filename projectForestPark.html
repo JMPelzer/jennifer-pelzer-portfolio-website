@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Cottages at Forest Park Case Study | Jennifer Pelzer Portfolio</title>
+
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Accessible keyboard skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <!-- Logo / Home -->
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/JP_logo.png"
+             alt="JP — Home page of Jennifer Pelzer">
+      </a>
+
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <button id="menu-btn"
+                class="menu-btn"
+                aria-expanded="false"
+                aria-controls="primary-nav"
+                aria-label="Toggle navigation">
+          ☰
+        </button>
+
+        <ul id="primary-nav" class="nav-list">
+          <li class="has-submenu">
+            <a href="#work-menu"
+               class="work-link"
+               aria-haspopup="true"
+               aria-expanded="false">
+              Work ▾
+            </a>
+
+            <ol id="work-menu" class="work-submenu" aria-label="Project list">
+              <li><a href="projectForestPark.html">Forest Park</a></li>
+              <li><a href="projectBM.html">Birthday Messaging</a></li>
+              <li><a href="projectLibrary.html">Library App</a></li>
+              <li><a href="projectPrague.html">Prague Explorer</a></li>
+              <li><a href="projectRocketBikes.html">Rocket Bikes</a></li>
+            </ol>
+          </li>
+
+          <li><a href="about.html">About</a></li>
+          <li><a href="connect.html">Stack</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ================= PAGE CONTENT ================= -->
+  <main id="main-content" tabindex="-1" class="container">
+
+    <!-- Purple Hero Banner -->
+    <section class="hero-banner" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h2 id="hero-title">Jennifer Pelzer</h2>
+        <p class="hero-subtitle">Accessibility-First Full-Stack Web Developer</p>
+        <p class="hero-subtitle">Designing accessible, intuitive products, where empathy meets engineering.</p>
+      </div>
+
+      <div class="hero-icon">
+        <img 
+          src="assets/icons/blue_accessability.png"
+          alt="Accessibility symbol representing inclusive design"
+        >
+      </div>
+    </section>
+
+    <!-- CASE STUDY WRAPPER -->
+    <section class="case-study">
+
+      <!-- TITLE -->
+      <header class="case-study-header">
+        <h1 class="case-study-title">CASE STUDY: The Cottages at Forest Park</h1>
+        <p class="case-study-subtitle">Improving the User Experience Through Research and Accessibility</p>
+        <p>Arizona State University | GIT 542 |Collaborative UX Research and Design Project</p>
+      </header>
+    
+      <!-- FEATURE IMAGE -->
+      <figure class="case-study-hero">
+        <img src="assets/images/ForestPark_Hero.png"
+             alt="Proposed homepage redesign for The Cottages at Forest Park,
+      showing clearer navigation, prominent actions, and organized content">
+       <figcaption>
+      Proposed homepage prototype developed as part of our team project.
+    </figcaption>
+      </figure>
+
+      <!-- BACKGROUND -->
+      <section class="cs-section" aria-labelledby="background-heading">
+        <h2 id="background-heading">Background</h2>
+        <p>
+  The Cottages at Forest Park is a senior living community in
+  Lafayette, Colorado. Its original website was developed
+  primarily to market and sell homes while the community
+  was under construction.
+</p>
+
+<p>
+  As construction ended and residents moved in, the website's
+  purpose began to change. It needed to support an established
+  residential community by providing accessible information,
+  resident resources, and clear communication, while still
+  welcoming prospective residents and their families.
+</p>
+
+<p>
+  As part of a six-person graduate team at Arizona State
+  University, I collaborated throughout a comprehensive
+  evaluation of the existing website. Our goal was to
+  understand the needs of its evolving audience and
+  recommend improvements based on user research,
+  usability testing, and accessibility principles.
+</p>
+      </section>
+
+      <!-- CHALLENGE -->
+      <section class="cs-section" aria-labelledby="challenge-heading">
+        <h2 id="challenge-heading">Challenge</h2>
+       <p>
+  The website had been created for a different stage in the
+  community's development. Although it originally focused
+  on selling homes, Forest Park now needed a website that
+  could also serve people already living there.
+</p>
+
+<p>
+  The existing information architecture did not adequately
+  support this shift. Visitors encountered confusing navigation,
+  difficult-to-find information, and limited access to
+  resident-focused resources. Important content was not
+  always easy to locate or understand.
+</p>
+
+<p>
+  Our research reinforced these concerns. In a survey of
+  55 participants, 51% reported that finding the information
+  they needed was difficult or very difficult.
+</p>
+
+<p>
+  Our challenge was to recommend a more intuitive and
+  accessible experience that balanced the needs of
+  prospective residents, current residents, and their families.
+</p>
+
+        <figure class="cs-image">
+          <img src="assets/images/ForestPark_Survey.png"
+               alt="Survey findings identifying difficulties locating
+        important information on the Forest Park website">
+          <figcaption>
+            User research findings highlighted information
+        discovery and navigation problems.
+          </figcaption>
+        </figure>
+      </section>
+
+        <!-- PROCESS -->
+  <section class="cs-section" aria-labelledby="process-heading">
+    <h2 id="process-heading">Process</h2>
+
+    <p>
+      I worked collaboratively with my team across the
+      research and design process. We combined several
+      methods to understand user needs, evaluate the
+      existing experience, and develop recommendations.
+    </p>
+
+    <ul>
+      <li>
+        <strong>Heuristic evaluation:</strong>
+        Evaluated the website using Nielsen's
+        ten usability heuristics.
+      </li>
+      <li>
+        <strong>User surveys:</strong>
+        Gathered feedback from 55 participants about
+        information needs and website usability.
+      </li>
+      <li>
+        <strong>Persona development:</strong>
+        Created user personas representing different
+        visitor goals and needs.
+      </li>
+      <li>
+        <strong>Usability testing:</strong>
+        Observed participants completing tasks such
+        as locating floor plans, finding amenities,
+        and identifying how to schedule a tour.
+      </li>
+      <li>
+        <strong>Accessibility evaluation:</strong>
+        Considered barriers affecting readability,
+        navigation, and access to information.
+      </li>
+      <li>
+        <strong>Prototyping:</strong>
+        Developed proposed interface improvements
+        informed by our research findings.
+      </li>
+    </ul>
+
+    <figure class="cs-image">
+      <img
+        src="assets/images/ForestPark_Process.png"
+        alt="Research journey showing heuristic evaluation,
+        surveys, personas, usability testing, prototype
+        design, and recommendation analysis"
+        loading="lazy">
+      <figcaption>
+        Our research process combined evaluation,
+        participant feedback, and iterative design.
+      </figcaption>
+    </figure>
+
+    <p>
+      The research helped us connect specific usability
+      problems to design decisions rather than relying
+      on visual preferences alone.
+    </p>
+
+    <figure class="cs-image">
+      <img
+        src="assets/images/ForestPark_Research.png"
+        alt="Research findings and participant information
+        from the Forest Park website study"
+        loading="lazy">
+      <figcaption>
+        Participant research informed our understanding
+        of the website's different audiences.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="cs-section" aria-labelledby="results-heading">
+    <h2 id="results-heading">Results</h2>
+
+    <p>
+      Our evaluation identified recurring problems with
+      navigation, information hierarchy, and the
+      visibility of essential content and actions.
+      We translated these findings into proposed
+      improvements for the website.
+    </p>
+
+    <p>
+      The homepage prototype introduced clearer navigation,
+      more prominent calls to action, and easier access
+      to frequently requested information. Additional
+      concepts explored improvements to community
+      information and resident resources.
+    </p>
+
+    <figure class="cs-image">
+      <img
+        src="assets/images/ForestPark_Prototype2.png"
+        alt="Comparison of the existing community information
+        page and the proposed redesign"
+        loading="lazy">
+      <figcaption>
+        Before-and-after comparison of the community
+        information experience.
+      </figcaption>
+    </figure>
+
+    <figure class="cs-image">
+      <img
+        src="assets/images/ForestPark_Prototype3.png"
+        alt="Comparison showing proposed improvements
+        to resident portal information and navigation"
+        loading="lazy">
+      <figcaption>
+        Proposed improvements to resident resources
+        and self-service navigation.
+      </figcaption>
+    </figure>
+
+    <p>
+      The final deliverables included research findings,
+      usability recommendations, and interactive
+      prototypes. These were proposed design solutions,
+      not changes deployed to the live website.
+    </p>
+
+    <p>
+      This project strengthened my experience with
+      collaborative UX research, accessibility evaluation,
+      usability testing, and translating evidence
+      into practical design recommendations.
+    </p>
+  </section>
+
+    </section>
+  </main>
+
+  <!-- Back to top -->
+  <button id="back-to-top"
+          class="back-to-top"
+          aria-label="Return to top of page">
+    ↑
+  </button>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" role="contentinfo">
+
+    <nav class="footer-nav" aria-label="Footer links">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/jennifer-pelzer-a27243277/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/JMPelzer" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.behance.net/jenniferpelzer1" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="assets/images/Resume_Direct_Oct_2026.pdf" target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; <span id="year"></span> Jennifer Pelzer. Accessibility-First Web Development.</p>
+  </footer>
+
+  <!-- Global JS -->
+  <script src="main.js"></script>
+
+</body>
+</html>
